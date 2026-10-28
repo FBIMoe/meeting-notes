@@ -76,7 +76,7 @@ fi
 for f in "$REPO/examples/context/"*.md; do
   [[ -f "$DEST/context/${f:t}" ]] || { cp "$f" "$DEST/context/"; say "Copied example ${f:t} — replace it with your own"; }
 done
-chmod +x "$REPO"/pipeline/*.sh "$REPO/pipeline/rediarize" "$REPO"/extras/*.sh "$REPO"/reminders/*.py "$REPO/app/server.py"
+chmod +x "$REPO"/pipeline/*.sh "$REPO/pipeline/rediarize" "$REPO"/extras/*.sh "$REPO/reminders/push-reminders.py" "$REPO/reminders/sync-reminders.py" "$REPO/app/server.py"
 
 # --- optional parts --------------------------------------------------------------------------
 source "$CONFIG"
