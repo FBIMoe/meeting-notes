@@ -1,0 +1,6 @@
+#!/bin/zsh
+# rediarize — re-label a MacWhisper transcript's speakers with pyannote (runs in its own venv).
+VENV="${PYANNOTE_VENV:-$HOME/.meeting-notes/pyannote-venv}"
+[[ -x "$VENV/bin/python" ]] || { print -u2 "rediarize: pyannote venv missing ($VENV) — see README"; exit 3 }
+export HF_HUB_OFFLINE=1        # the model is cached after setup; never needs the network at run time
+exec "$VENV/bin/python" "${0:A:h}/rediarize.py" "$@"

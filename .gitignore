@@ -1,0 +1,13 @@
+# Your personal files live in ~/.meeting-notes, outside this repo. These are belt-and-braces.
+/config.sh
+/context/
+/meeting-hints/
+*.ogg
+*.m4a
+*.mp3
+*.wav
+.DS_Store
+__pycache__/
+extras/ocr-image
+*.pyc
+.playwright-mcp/

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Meeting Notes</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Meetings">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f2f4f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1016" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-180.png">
+<link rel="icon" href="/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<nav class="tabs" id="tabs" aria-label="Sections"></nav>
+<main id="main"><p class="loading">Loading your meetings…</p></main>
+<div class="player" id="player" hidden>
+  <div class="in">
+    <button class="play" id="pPlay" aria-label="Play"></button>
+    <div class="info"><div class="pt" id="pTitle"></div>
+      <input type="range" id="pSeek" min="0" max="100" step="1" value="0" aria-label="Position">
+      <div class="tm" id="pTime">Getting the audio ready…</div></div>
+    <button class="x" id="pClose" aria-label="Close player">✕</button>
+  </div>
+</div>
+<audio id="audio" preload="none"></audio>
+<div id="sheetRoot"></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="/md.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Filled in by install.sh: __LABEL__, __ARGS__, __SCHEDULE__, __LOGDIR__, __NAME__ are replaced. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>__LABEL__</string>
+  <key>ProgramArguments</key>
+  <array>__ARGS__</array>
+  __SCHEDULE__
+  <key>RunAtLoad</key><true/>
+  <key>EnvironmentVariables</key>
+  <dict><key>MEETING_NOTES_CONFIG</key><string>__CONFIG__</string></dict>
+  <key>StandardOutPath</key><string>__LOGDIR__/__NAME__.log</string>
+  <key>StandardErrorPath</key><string>__LOGDIR__/__NAME__.err</string>
+</dict>
+</plist>
